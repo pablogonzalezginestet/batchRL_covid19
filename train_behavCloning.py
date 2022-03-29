@@ -1,16 +1,8 @@
 """
-This script is used to develop a baseline policy using only the observed patient data via Behavior Cloning.
-
-This baseline policy is then used to truncate and guide evaluation of policies learned using dBCQ. It should only need to be
-run once for each unique cohort that one looks to learn a better treatment policy for.
-
-The patient cohort used and evaluated in the study this code was built for is defined at: https://github.com/microsoft/mimic_sepsis
-============================================================================================================================
-This code is provided under the MIT License and is meant to be helpful, but WITHOUT ANY WARRANTY;
+This code was adapted from the code developed by
 
 November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector Institute
-============================================================================================================================
-Notes:
+
 
 """
 
