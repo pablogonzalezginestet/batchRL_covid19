@@ -1,14 +1,8 @@
 '''
-This script preprocesses and organizes the Sepsis patient cohort extracted with the procedure 
-provided at: https://github.com/microsoft/mimic_sepsis to produce patient trajectories for easier
-use in sequential models.
-
-============================================================================================================================
-This code is provided under the MIT License and is meant to be helpful, but WITHOUT ANY WARRANTY;
+This code was adapted from the code developed by
 
 November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector Institute
 ============================================================================================================================
-Notes:
 
 '''
 
