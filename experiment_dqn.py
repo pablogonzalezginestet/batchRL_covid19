@@ -1,29 +1,7 @@
 '''
-This module defines the Experiment class that intializes, trains, and evaluates a Recurrent autoencoder.
-
-The central focus of this class is to develop representations of sequential patient states in acute clinical settings.
-These representations are learned through an auxiliary task of predicting the subsequent physiological observation but 
-are also used to train a treatment policy via offline RL. The specific policy learning algorithm implemented through this
-module is the discretized form of Batch Constrained Q-learning [Fujimoto, et al (2019)]
-
-This module was designed and tested for use with a Septic patient cohort extracted from the MIMIC-III (v1.4) database. It is
-assumed that the data used to create the Dataloaders in lines 174, 180 and 186 is patient and time aligned separate sequences 
-of:
-    (1) patient demographics
-    (2) observations of patient vitals, labs and other relevant tests
-    (3) assigned treatments or interventions
-    (4) how long each patient trajectory is
-    (5) corresponding patient acuity scores, and
-    (6) patient outcomes (here, binary - death vs. survival)
-
-The cohort used and evaluated in the study this code was built for is defined at: https://github.com/microsoft/mimic_sepsis
-============================================================================================================================
-This code is provided under the MIT License and is meant to be helpful, but WITHOUT ANY WARRANTY;
-
+This code was adapted from the code developed by
 November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector Institute
 ============================================================================================================================
-Notes:
- - The code for the AIS approach and general framework we build from was developed by Jayakumar Subramanian
 
 '''
 import numpy as np
