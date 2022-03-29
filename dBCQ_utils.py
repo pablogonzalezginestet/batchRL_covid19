@@ -1,19 +1,6 @@
 """
-The classes and methods in this file are derived or pulled directly from https://github.com/sfujim/BCQ/tree/master/discrete_BCQ
-which is a discrete implementation of BCQ by Scott Fujimoto, et al. and featured in the following 2019 DRL NeurIPS workshop paper:
-@article{fujimoto2019benchmarking,
-  title={Benchmarking Batch Deep Reinforcement Learning Algorithms},
-  author={Fujimoto, Scott and Conti, Edoardo and Ghavamzadeh, Mohammad and Pineau, Joelle},
-  journal={arXiv preprint arXiv:1910.01708},
-  year={2019}
-}
-
-============================================================================================================================
-This code is provided under the MIT License and is meant to be helpful, but WITHOUT ANY WARRANTY;
-
-November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector Institute
-============================================================================================================================
-Notes:
+Based from https://github.com/sfujim/BCQ/tree/master/discrete_BCQ
+which is a discrete implementation of BCQ by Scott Fujimoto, et al.
 
 """
 
