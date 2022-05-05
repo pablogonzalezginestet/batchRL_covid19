@@ -453,11 +453,4 @@ if __name__ == '__main__':
     run_dbcq()
     
 
-'''
-for rnd_state in ([1,5,10,15,20]):  
-        # split data into train, val
-        idx_country = np.unique(df_normalized['Entity'])
-        train_idx, val_idx = train_test_split(idx_country, test_size = 0.2, random_state = rnd_state)
-        train_df = df_normalized[df_normalized['Entity'].isin(train_idx)]
-        val_df = df_normalized[df_normalized['Entity'].isin(val_idx)]
-'''
+
