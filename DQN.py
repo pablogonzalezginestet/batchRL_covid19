@@ -448,37 +448,3 @@ if __name__ == '__main__':
     run_dqn()
     
 
-'''
-for rnd_state in ([1,5,10,15,20]):  
-        # split data into train, val
-        idx_country = np.unique(df_normalized['Entity'])
-        train_idx, val_idx = train_test_split(idx_country, test_size = 0.2, random_state = rnd_state)
-        train_df = df_normalized[df_normalized['Entity'].isin(train_idx)]
-        val_df = df_normalized[df_normalized['Entity'].isin(val_idx)]
-'''
-Q = FC_Q_dqn(state_dim, num_actions).to(device)
-Q_target = copy.deepcopy(Q)
-sum_q_loss=0
-# Sample replay buffer
-state, action, reward, next_state, done = ReplayBuffer(batch_size, train_df, state_features)
-# Compute the target Q value
-
-action = torch.tensor(action,dtype=torch.long).to(device)
-state  = state.to(device)
-done = done.to(device)
-reward = reward.to(device)
-next_state = next_state.to(device)        
-double_q = Q_target(next_state).max(1, keepdim=True)[0]
-target_Q = reward + done * .99 * double_q.reshape(-1, 1)
-# Get current Q estimate
-current_Q = Q(state).gather(1, action)
-# Compute Q loss
-Q_loss = F.smooth_l1_loss(current_Q, target_Q)
-# Optimize the Q
-self.Q_optimizer.zero_grad()
-Q_loss.backward()
-self.Q_optimizer.step()
-# Update target network by polyak or full copy every X iterations.
-self.iterations += 1
-self.maybe_update_target()
-return Q_loss.detach().item()
