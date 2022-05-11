@@ -1,3 +1,5 @@
+### Plot Reproduction rate vs reward function, k=5,14
+
 import matplotlib
 import matplotlib.pyplot as plt
 
