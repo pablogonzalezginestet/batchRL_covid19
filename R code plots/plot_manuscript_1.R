@@ -1,4 +1,8 @@
-
+#### Plots
+###  i) Table 1
+###  ii) Figure 1: Average across countries of the daily recorded variables: new cases,reproduction rate, face covering policy and stringency index
+###  iii) Figure 2: Visualization of the dynamic of the reward functions
+###  iv) Dynamic of the stringency index per country
 
 library(tableone)
 
