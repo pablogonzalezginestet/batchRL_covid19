@@ -1,3 +1,7 @@
+### Plots
+### Figure 3: Actions taken by the government and those discovered by the models 
+### Figures actions over time by country
+
 #library('RcppCNPy')
 library(reshape2)
 library(ggplot2)
@@ -1147,7 +1151,7 @@ ggplot(df_loss_plot,aes(x = Iterations, y = Loss, color=Fold)) +
 
 
 
-# ´dqn lstm
+# Â´dqn lstm
 setwd( "C:/Users/pabgon/rl_representations/srl_test/results/rewards_gap5/states_t/DQN_lstm")
 loss_train_1 = np$load("loss_train_rnd_state1_lr0.001.npy",allow_pickle = TRUE)
 loss_train_2 = np$load("loss_train_rnd_state2_lr0.001.npy",allow_pickle = TRUE)
